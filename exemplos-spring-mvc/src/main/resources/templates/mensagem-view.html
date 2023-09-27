@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Exemplo Spring MVC</title>
+		<meta charset="UTF-8">
+	</head>
+	<body>
+		<form th:object=${dados} method="POST" action="/formulario/salvar">
+			<div>
+				<label for="nome">nome</label>
+				<input type="text" th:field="*{nome}" name="nome">
+			</div>
+			
+			<div>
+				<label for="email">email</label>
+				<input type="email" th:field="*{email}" name="email">
+			</div>
+			
+			<div>
+				<label for="telefone">telefone</label>
+				<input type="text" th:field="*{telefone}" name="telefone">
+			</div>
+			
+			<div>
+				<label for="dataNascimento">data de nascimento</label>
+				<input type="date" th:field="*{dataNascimento}" name="dataNascimento">	
+			</div>
+			
+			<div>
+				<label for="senha">senha</label>
+				<input type="text" th:field="*{senha}" name="senha">
+			</div>
+			
+			<div>
+				<label for="descricao">descrição</label>
+				<input type="text" th:field="*{descricao}" name="descricao">
+			</div>
+			
+			<div>
+				<label for="numero">número</label>
+				<input type="number" th:field="*{numero}" name="numero">
+			</div>
+			
+			<div>
+				<label for="peso">peso</label>
+				<input type="number" th:field="*{peso}" name="peso">
+			</div>
+			
+			<div>
+				<label for="altura">altura</label>
+				<input type="number" th:field="*{altura}" name="altura">
+			</div>
+			
+			<div>
+				<label for="genero">genêro</label>
+				<input type="text" th:field="*{genero}" name="genero">
+			</div>
+			
+			<div>
+				<label for="interesses">interesses</label>
+				<input type="text" th:field="*{interesses}" name="interesses">
+			</div>
+			
+			<div>
+				<button type="submit">Enviar</button>
+			</div>
+		</form>
+	</body>
+</html>
