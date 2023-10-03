@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portifolio</title>
+
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            background-color:rgb(78, 78, 78);
+            color: white;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        
+        #subtitle{
+            font-size:130%;
+        }
+        
+        #description{   
+            padding: 10vh;
+        }
+
+        header,main,section{
+            margin:15vh 15vw 0;
+        }
+
+        main,section,footer{
+            padding: 5vh 5vw;
+        }
+
+        footer{
+            margin: 15vh 0 0;
+            background-color: #000000;
+        }
+
+        h1{
+            font-size:50px;
+        }
+
+        h2{
+            font-size: 40px   ;
+            margin-bottom: 10px;
+        }
+
+        .container-experiences {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            gap: 2rem;
+        }
+
+        .container-experiences div  {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .experiences-description{
+            padding-top: 20px;
+        }
+
+        a{
+            text-decoration: none;
+            color: rgb(78, 78, 78);
+        }
+
+       
+    </style>
+</head>
+<body>
+    <header>
+      
+    </header>
+    <main>
+        <div id="introduction">
+            <h1>Ronald Amorim Garcia</h1>
+            <img src="perfil.jpg" width="30%" height="30%"> 
+            <p id="subtitle">Programador Java</p>
+            <p><em>"Take one thing at a time"</em></p>
+        </div>
+        
+        <p id="description">
+            Sou programador backend com mais de 4 meses de experiência em criação de serviços visando transações bancárias, 
+            utilizando tecnologias variadas como Jakarta EE (JMS, EJB, JPA), Spring MVC, Oracle DB, MariaDB, WebSphere, MQ e Gitlab/Git.  
+            Apaixonado por novos desafios e soluções de problemas, participei da manutenção de aplicações escaláveis que são acionadas mais de um milhão de vezes ao dia.
+        </p>
+    </main>
+    <section>
+        <h2>Educação</h2>
+        <p>
+            <strong>Centro Universitário Senac</strong> <br> 
+            Presencial <br>
+            <em>Tecnólogo em Análise e Desenvolvimento de Sistemas <br>
+            Jan 2022 - Jun 2024 </em>
+        </p>
+    </section>
+    <section>
+        <h2>Experiências</h2>
+        <div class="container-experiences">
+            <div>
+                <p><strong>Estagiário em Transações Online</strong></p>
+                <p>Hibrido</p>
+                <h3 class="company-name">Tecnologia Bancária - TecBan</h3>
+                <p><em>Mar 2023 - Presente</em></p>
+                <ul class="experiences-description">
+                    <li>Colaboro no setor de transações online em que sou responsável por desenvolver soluções de software para tratar novas transações entre instituições.</li>
+                    <li>Nesse sentido, participei do desenvolvimento de softwares altamente escaláveis que suportam milhões de requisições.</li>
+                </ul>
+            </div>
+            
+            <div>
+                <p><strong>Estagiário</strong>
+                <p>Hibrido</p>
+                <h3 class="company-name">TRR Seguros</h3>
+                <p><em>Jun 2022 - Fev 2023</em></p>    
+                <ul class="experiences-description">
+                    <li>Desenvolvi rotinas que automatizam processos repetitivos dentro do setor de faturamento, utilizando VBA (linguagem de programação do excel), 
+                        aumentando significativamente a produtividade da equipe.</li>
+                    <li>Projetei e desenvolvi formulários para clientes parceiras através da ferramenta Pipefy, melhorando a relação entre cliente e corretora.</li>
+                </ul>
+            </div>
+        </div>
+        
+    </section>
+    <section>
+        <h2>Idiomas</h2>
+        <h3><strong>Wizard By Pearson</strong></h3>
+        <p>Presencial</p>
+        <p><em>Jan 2018 - Presente</em></p>
+        <p>Inglês intermediário</p>
+    </section>
+    <footer>
+        <h2>Contatos</h2>
+        <p>Email: <a href="mailto:ronald_amorim1@outlook.com">ronald_amorim1@outlook.com</a></p>
+        <p>Github: <a href="https://www.github.com/RonaldAG" target="_blank">RonaldAG</a></p>
+        <p>Linkedin: <a href="https://www.linkedin.com/in/ronald-amorim-garcia" target="_blank">ronald-amorim-garcia</a></p>
+        <p><small>&copyRonaldAmorim</small></p>
+    </footer>
+</body>
+</html>
