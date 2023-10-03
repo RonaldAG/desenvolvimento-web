@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title th:text="${cabecalhos.getTituloPagina()}"></title>
+	<style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            background-color:rgb(78, 78, 78);
+            color: white;
+            text-align: center;
+            letter-spacing: 2px;
+        }
+        
+        #subtitle{
+            font-size:130%;
+        }
+        
+        #description{   
+            padding: 10vh;
+        }
+
+        header,main,section{
+            margin:15vh 15vw 0;
+        }
+
+        main,section,footer{
+            padding: 5vh 5vw;
+        }
+
+        footer{
+            margin: 15vh 0 0;
+            background-color: #000000;
+        }
+
+        h1{
+            font-size:50px;
+        }
+
+        h2{
+            font-size: 40px   ;
+            margin-bottom: 10px;
+        }
+
+        .container-experiences {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            gap: 2rem;
+        }
+
+        .container-experiences div  {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .experiences-description{
+            padding-top: 20px;
+        }
+
+        a{
+            text-decoration: none;
+            color: rgb(78, 78, 78);
+        }
+
+		ul{
+			list-style-type: none;
+		}
+
+       
+    </style>
+	
+</head>
+<body>
+	<main>
+		<div id="introduction">
+				<h1 th:text="${curriculo.getIntroducao().getName()}"></h1>
+				<p th:text="${curriculo.getIntroducao().getSubtitle()}"></p>
+				<p><em th:text="${curriculo.getIntroducao().getQuote()}"></em></p>
+		</div>
+
+		<p id="description" th:text="${curriculo.getIntroducao().getDescription()}"></p>
+	</main>
+	<section>
+        <h2 th:text="${cabecalhos.getEducacao()}"></h2>
+        	<p th:text="${curriculo.getEducacao().getTitle()}"><strong></strong> </p>
+        	<p th:text="${curriculo.getEducacao().getModel()}"></p>
+        	<p th:text="${curriculo.getEducacao().getSubtitle()}"><em></em></p>
+            <p th:text="${curriculo.getEducacao().getTime()}"><em></em></p>
+        </p>
+    </section>
+	<section>
+        <h2 th:text="${cabecalhos.getExperiencia()}"></h2>
+        <div class="container-experiences">
+            <div>
+                <strong><p th:text="${curriculo.getExperiencia().get(0).getTitle()}"></strong></p>
+                <p th:text="${curriculo.getExperiencia().get(0).getModel()}"></p>
+                <h3 class="company-name" th:text="${curriculo.getExperiencia().get(0).getSubtitle()}"></h3>
+                <p><em></em></p>
+                <p th:text="${curriculo.getExperiencia().get(0).getDescription()}"></p>
+            </div>        
+    </section>
+	<section>
+        <h2 th:text="${cabecalhos.getIdiomas()}"></h2>
+        <h3 th:text="${curriculo.getIdioma().getTitle()}"><strong></strong></h3>
+		<p th:text="${curriculo.getIdioma().getModel()}"></p>
+        <p th:text="${curriculo.getIdioma().getDescription()}"></p>
+        <p th:text="${curriculo.getIdioma().getTime()}"><em></em></p>
+    </section>
+
+	<footer>
+        <h2 th:text="${cabecalhos.getContatos()}"></h2>
+		<ul th:each="contato : ${curriculo.getContatos()}">
+			<p th:text="${contato.getTitle()}"></p>
+			<li th:text="${contato.getLink()}"></li>
+	</ul>
+	</footer>
+</body>
+</html>
